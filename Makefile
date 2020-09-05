@@ -8,6 +8,7 @@ default:
 		git pull origin ${BRANCH} && \
 		cd /home/isucon/torb/webapp/${LANG} && \
 		venv/bin/python3 -m pip install -r requirements.txt  && \
+		sudo systemctl daemon-reload && \
 		sudo systemctl restart torb.${LANG}.service"
 
 reboot:

@@ -9,8 +9,9 @@ default:
 		git pull origin ${BRANCH} && \
 		cd /home/isucon/torb/webapp/${LANG} && \
 		venv/bin/python3 -m pip install -r requirements.txt  && \
-		sudo systemctl daemon-reload && \
-		sudo systemctl restart torb.${LANG}.service"
+		systemctl daemon-reload && \
+		systemctl stop torb.${LANG}.service && \
+		systemctl start torb.${LANG}.service"
 
 reboot:
 	ssh root@133.130.108.237 -t "sudo reboot"

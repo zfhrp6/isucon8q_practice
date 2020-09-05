@@ -9,7 +9,9 @@ import subprocess
 from io import StringIO
 import csv
 from datetime import datetime, timezone
-import newrelic.agent newrelic.agent.initialize('/home/isucon/newrelic.ini')
+import newrelic.agent
+
+newrelic.agent.initialize('/home/isucon/newrelic.ini')
 
 
 base_path = pathlib.Path(__file__).resolve().parent.parent

@@ -11,7 +11,8 @@ default:
 		venv/bin/python3 -m pip install -r requirements.txt  && \
 		systemctl daemon-reload && \
 		systemctl stop torb.${LANG}.service && \
-		systemctl start torb.${LANG}.service"
+		systemctl start torb.${LANG}.service && \
+		systemctl status torb.${LANG}.service"
 
 reboot:
 	ssh root@133.130.108.237 -t "sudo reboot"

@@ -221,6 +221,8 @@ def get_index():
     events = []
     for event in get_events(lambda e: e["public_fg"]):
         events.append(sanitize_event(event))
+    print("hoge")
+    return
     return flask.render_template('index.html', user=user, events=events, base_url=make_base_url(flask.request))
 
 

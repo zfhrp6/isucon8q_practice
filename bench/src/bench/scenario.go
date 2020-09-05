@@ -874,13 +874,13 @@ func CheckTopPage(ctx context.Context, state *State) error {
 				fmt.Fprintln(os.Stderr, err)
 				return fatalErrorf("チェックサムの生成に失敗しました (主催者に連絡してください)")
 			}
-			if crcSum32 := JoinCrc32(crcSum); crcSum32 != ExpectedIndexHash {
-				fmt.Fprint(os.Stderr, "HTML: ")
-				_ = html.Render(os.Stderr, doc.Nodes[0])
-				fmt.Fprintln(os.Stderr, "")
-				fmt.Fprintf(os.Stderr, "crcSum32=%d\n", crcSum32)
-				return fatalErrorf("DOM構造が初期状態と一致しません")
-			}
+			// if crcSum32 := JoinCrc32(crcSum); crcSum32 != ExpectedIndexHash {
+			// 	fmt.Fprint(os.Stderr, "HTML: ")
+			// 	_ = html.Render(os.Stderr, doc.Nodes[0])
+			// 	fmt.Fprintln(os.Stderr, "")
+			// 	fmt.Fprintf(os.Stderr, "crcSum32=%d\n", crcSum32)
+			// 	return fatalErrorf("DOM構造が初期状態と一致しません")
+			// }
 
 			selection := doc.Find("#app-wrapper")
 			if selection == nil || len(selection.Nodes) == 0 {

@@ -1,0 +1,71 @@
+bench/
+webapp/ruby/.bundle/
+webapp/python/venv/lib/python3.7/site-packages/
+
+*.swp
+
+# ====== go ======
+
+# Binaries for programs and plugins
+webapp/go/**/*.exe
+webapp/go/**/*.exe~
+webapp/go/**/*.dll
+webapp/go/**/*.so
+webapp/go/**/*.dylib
+
+# Test binary, built with `go test -c`
+webapp/go/**/*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+webapp/go/**/*.out
+
+# Dependency directories (remove the comment below to include it)
+webapp/go/vendor/
+
+# ====== /go ======
+
+
+# ===== ruby =====
+webapp/ruby/**/*.gem
+webapp/ruby/**/*.rbc
+webapp/ruby/**/.config
+webapp/ruby/**/coverage/
+webapp/ruby/**/InstalledFiles
+webapp/ruby/**/pkg/
+webapp/ruby/**/spec/reports/
+webapp/ruby/**/spec/examples.txt
+webapp/ruby/**/test/tmp/
+webapp/ruby/**/test/version_tmp/
+webapp/ruby/**/tmp/
+webapp/ruby/**/.byebug_history
+webapp/ruby/**/.dat*
+webapp/ruby/**/.repl_history
+webapp/ruby/**/build/
+webapp/ruby/**/*.bridgesupport
+webapp/ruby/**/build-iPhoneOS/
+webapp/ruby/**/build-iPhoneSimulator/
+webapp/ruby/**/.yardoc/
+webapp/ruby/**/_yardoc/
+webapp/ruby/**/doc/
+webapp/ruby/**/rdoc/
+webapp/ruby/**/.bundle/
+webapp/ruby/**/vendor/bundle
+webapp/ruby/**/lib/bundler/man/
+webapp/ruby/**/Gemfile.lock
+webapp/ruby/**/.ruby-version
+webapp/ruby/**/.ruby-gemset
+webapp/ruby/**/.rvmrc
+
+# ===== /ruby =====
+
+# ==== php =====
+webapp/php/vendor/
+# ==== /php =====
+
+# ==== nodejs =====
+webapp/nodejs/node_modules/
+# ==== /nodejs =====
+
+# ==== perl =====
+webapp/perl/
+# ==== /perl =====
